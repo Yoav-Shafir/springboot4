@@ -16,6 +16,8 @@ public class DemoApplication {
         SpringApplication.run(DemoApplication.class, args);
     }
 
+    // This method will be executed after the application context is loaded
+    // and right before the Spring Application run method is completed
     @Bean
     CommandLineRunner initData(StockMongoReactiveCrudRepository mongoRepository) {
         return (p) -> {
